@@ -30,6 +30,7 @@ class _FirstPageScreenState extends State<FirstPageScreen> {
   void setData(BuildContext context, int color) async {
     SharedPreferences _prefs = await _sharedPreferences;
     _prefs.setInt("ColorKey", color);
+    selectedColor = color;
     Navigator.of(context).pop();
 
     setState(() {});
